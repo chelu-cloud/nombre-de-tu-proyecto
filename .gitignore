@@ -1,0 +1,44 @@
+# --- General ---
+.DS_Store
+.env
+.env.local
+.env.*.local
+*.log
+*.swp
+
+# --- Docker ---
+.docker/
+**/docker-compose.override.yml
+
+# --- Terraform ---
+# ¡CRÍTICO! El estado contiene secretos en texto plano
+*.tfstate
+*.tfstate.backup
+*.tfvars
+*.tfvars.json
+.terraform/
+.terraform.tfvars.lock.hcl
+
+# --- Kubernetes / Helm ---
+*.tgz
+kubeconfig
+.kube/
+
+# --- AWS ---
+# Evita subir tus credenciales locales
+.aws/
+.cdk.staging/
+cdk.out/
+
+# --- Lenguajes (Node/Python) ---
+node_modules/
+dist/
+build/
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# --- IDEs ---
+.vscode/
+.idea/

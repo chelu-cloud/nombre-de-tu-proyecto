@@ -1,0 +1,12 @@
+---
+- name: Configurar Infraestructura Swarm
+  hosts: all
+  become: true
+  roles:
+    - docker
+
+- name: Configurar Swarm Cluster
+  hosts: all
+  become: true
+  roles:
+    - swarm
